@@ -30,14 +30,18 @@ ul.nav li a.logotype {
 	color:#fff;
 	text-shadow:1px 1px 3px #000;
 }
+/*
 .content h3 a {
 	color:#333;
 }
+*/
 
+/*
 .contentlink .img {
 	float:left;
 	margin:20px 10px 10px 0;
 }
+*/
 
 .carousel .part {
 	margin-bottom:0;
@@ -63,3 +67,16 @@ td {
 @import "Features.css";
 @import "Mood.css";
 */
+
+
+.part.teaser .contentlink .img {
+	display: block;
+	float: none !important;
+}
+.part.teaser .contentlink .media-body {
+	display: block;
+	margin: 15px 0;
+}
+.part.listing .media {
+margin: 0 0 20px 0;
+}

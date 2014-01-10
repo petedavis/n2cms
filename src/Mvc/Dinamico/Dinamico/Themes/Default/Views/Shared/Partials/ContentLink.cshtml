@@ -6,14 +6,14 @@
 	string contentClass = (string)ViewBag.contentClass ?? "content";
 	using (Content.BeginScope(Model))
 	{
-<div class="contentlink clearfix @(imgSize)Size">
+<div class="contentlink clearfix @(imgSize)Size media">
 	@if (Content.Has.Image)
 	{
-	<a class="img @imgSize" href="@Content.Current.Item.Url">@Content.Render.Image("Image", imgSize, cssClass: "img-responsive")</a>		
+	<a class="img @imgSize pull-left" href="@Content.Current.Item.Url">@Content.Render.Image("Image", imgSize, cssClass: "img-responsive media-object")</a>		
 	}
-	<div class="@contentClass">
-		<h3><a class="heading" href="@Content.Current.Item.Url">@Content.Current.Item.Title</a></h3>
-		<a class="summary" href="@Content.Current.Item.Url">@Content.Display.Summary</a>
+	<div class="@contentClass media-body">
+		<h3 class="media-heading"><a class="heading" href="@Content.Current.Item.Url">@Content.Current.Item.Title</a></h3>
+		<p class="summary">@Content.Display.Summary</p>
 	</div>
 </div>
 	}
