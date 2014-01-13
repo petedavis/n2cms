@@ -19,6 +19,26 @@ ul.nav li a.logotype {
 	/*ul.nav #searchform .input-group{
 		float:left;
 	}*/
+.navbar-brand, .navbar-nav>li>a {
+text-shadow: none;
+}	
+.navbar-nav.level1 {
+font-weight: bold;
+font-size: 16px;
+}
+.navbar-nav.level1 > li.active > a {
+	color: #ffffff;
+	background: #428BCA;
+}
+
+.navbar-collapse {
+	border-bottom: 1px solid #eeeeee;
+	padding:0;
+}
+
+.logoContainer {
+margin: 15px 15px 15px 0;
+}
 
 #main > img { margin: 0 15px; }
 
@@ -72,6 +92,7 @@ td {
 .part.teaser .contentlink .img {
 	display: block;
 	float: none !important;
+	margin-right: 0;
 }
 .part.teaser .contentlink .media-body {
 	display: block;
@@ -79,4 +100,74 @@ td {
 }
 .part.listing .media {
 margin: 0 0 20px 0;
+}
+
+#main .wide {
+	max-width: 100%;
+	height: auto;
+	margin: 0;
+}
+
+
+@media (max-width: 767px) {
+
+.topNavContainer {
+	padding:0 15px;
+}
+.nav-pills>li {
+float: none;
+display: block;
+}
+.navbar-collapse {
+padding-right: 15px;
+padding-left: 15px;
+}
+.navbar-toggle {
+color: #222222;
+-webkit-border-radius: 0px;
+border-radius: 0px;
+background: #ffffff;
+float: none;
+display: block;
+width: 100%;
+text-align: right;
+}
+.navbar-toggle .linesContainer {
+display: inline-block;
+margin: 0 0 0 10px;
+}	
+.navbar-toggle .icon-bar {
+	-webkit-border-radius: 0px;
+border-radius: 0px;
+background-color: #222222;
+}
+.navbar-toggle .buttonText {
+	text-transform: uppercase;
+}
+.part.teaser .contentlink .carousel-caption {
+	position: static;
+	background:#222222;
+	margin:0;
+}
+.carousel-control, .carousel-indicators {
+	display: none;
+}
+
+
+}
+
+@media (max-width: 991px) {
+	
+	
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+	
 }

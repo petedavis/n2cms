@@ -1,2 +1,17 @@
-﻿@Html.Tree(Content.Parse(Request["returnUrl"]) ?? Content.Traverse.StartPage,
-	htmlAttributes: new { id = "menu", @class = "nav nav-pills level1" })
+﻿<div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="buttonText">Main menu</span>
+      <div class="linesContainer">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </div>
+      
+    </button>
+   
+  </div>
+  <div class="collapse navbar-collapse" id="mainNav">
+@Html.Tree(Content.Parse(Request["returnUrl"]) ?? Content.Traverse.StartPage,
+	htmlAttributes: new { id = "menu", @class = "nav navbar-nav level1" })
+  </div>

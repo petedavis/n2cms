@@ -1,9 +1,12 @@
 ﻿@{using (Html.BeginForm("Search", null, new { id = "search", item = Content.Traverse.StartPage }, FormMethod.Get, new { id = "searchform", @class = "navbar-form", role = "search" }))
 {
+	<form class="navbar-form" role="search">
 	<div class="form-group">
-		<input name="q" placeholder="@Content.Translate["Search"]" class="form-control" style="width:120px;" />
-		<button type="submit" class="btn"><b class="glyphicon glyphicon-search"></b></button>
+		<input name="q" placeholder="@Content.Translate["Search"]" class="form-control" />
+		
 	</div>
+	<button type="submit" class="btn"><b class="glyphicon glyphicon-search"></b></button>
+	</form>
 }
 }
 <ul class="dropdown-menu">

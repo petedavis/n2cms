@@ -36,10 +36,10 @@
 			{
 			<div id="main" class="row">
 				@{ Html.RenderPartial("LayoutPartials/PreContent"); }
-				<div id="content" class="col-lg-9" role="main">
+				<div id="content" class="col-sm-8 col-md-9" role="main">
 					@RenderBody()
 				</div>
-				<div id="aside" class="col-lg-3" role="complementary">
+				<div id="aside" class="col-sm-4 col-md-3" role="complementary">
 					@if (IsSectionDefined("Aside"))
 					{
 						@RenderSection("Aside")
