@@ -315,13 +315,18 @@ namespace N2.Security
                 totalRecords = 0;
                 return muc;
             }
-            IList<ContentItem> users = Bridge.Repository.Find(Parameter.Equal("Email", emailToMatch) 
-                & Parameter.TypeEqual(typeof(N2.Security.Items.User).Name)
-                & Parameter.Equal("Parent", userContainer)).ToList();
-            totalRecords = users.Count;
-            N2.Collections.CountFilter.Filter(users, pageIndex * pageSize, pageSize);
 
-            foreach (N2.Security.Items.User u in users)
+            IList<User> users = Find.Items.Where.Type.Eq(typeof(User))
+                .And.Parent.Eq(userContainer)
+                .And.Detail("Email").Eq(emailToMatch)
+                .Select<User>()
+                .Skip(pageIndex * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            totalRecords = users.Count;
+
+            foreach (User u in users)
                 muc.Add(u.GetMembershipUser(Name));
             return muc;
         }
